@@ -9,4 +9,4 @@ So instead of running
 
 You can run 
 
-    $ docker run -ti -v `pwd`:/srv marmelab/compass compile
+    $ docker run -ti -v `pwd`:/srv bytesamurai/compass compile
