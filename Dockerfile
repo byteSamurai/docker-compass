@@ -21,10 +21,11 @@ RUN gem install --no-rdoc --no-ri compass-rgbapng
 
 
 FROM alpine:3.9
-RUN useradd -u 1009 -g 1010 gitlab-runner
+RUN adduser -u 1009 -g 1010 gitlab-runner
+USER gitlab-runner
 RUN apk add --no-cache ruby
 COPY --from=pre-builder /usr/lib/ruby/ /usr/lib/ruby/
-COPY --from=pre-builder /root/.gem /root/.gem
+COPY --from=pre-builder /root/.gem /home/gitlab-runner/.gem
 COPY --from=pre-builder /usr/bin/compass /usr/bin/compass
 
 ENV HOME /root
