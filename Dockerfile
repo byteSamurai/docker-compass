@@ -13,6 +13,9 @@ RUN apt-get install make
 
 # install compass
 RUN gem install --no-rdoc --no-ri compass
+RUN gem install --no-rdoc --no-ri compass-normalize
+RUN gem install --no-rdoc --no-ri companimation
+RUN gem install --no-rdoc --no-ri rgbapng
 
 WORKDIR /srv
 
