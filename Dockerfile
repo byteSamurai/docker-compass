@@ -6,6 +6,7 @@ RUN apk update \
         build-base \
         gcc \
         wget \
+        lftp \
         git
 RUN apk add --no-cache ruby ruby-dev
 
