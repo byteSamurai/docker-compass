@@ -33,4 +33,4 @@ USER gitlab-runner
 ENV HOME /root
 WORKDIR /srv
 
-ENTRYPOINT ["compass"]
+#ENTRYPOINT ["compass"]
